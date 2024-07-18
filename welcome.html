@@ -2,7 +2,14 @@
 <html>
 <body> 
 
-<h2>Welcome! </h2>
+<h2 id="demo">Welcome! </h2>
 
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const name = localStorage.getItem('fname');
+                document.getElementById('demo').textContent = 'Welcome ' + name;
+        });
+    </script>
+  
 </body>
 </html>
