@@ -1,24 +1,24 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 <body>
 
 <h2> LOGIN </h2>
 
-<form id="form" action="/welcome.html">
-<label for="fname">Nickname</label>
-<input type="text" name="name" id="name"> <br>
-<label for="password">Password</label> 
-<input type="text" id="password" name="pass"> <br>
-<input type="submit" value="Login"> 
+<form id="form">
+    <label for="name">Nickname</label>
+    <input type="text" name="name" id="name"> <br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="pass"> <br>
+    <input type="submit" value="Login">
 </form>
 
-  <script>
-      document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            localStorage.setItem('name', name);
-            window.location.href = 'welcome.html';
-        });
-    </script>
+<script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        localStorage.setItem('name', name);
+        window.location.href = 'welcome.html';
+    });
+</script>
 </body>
 </html>
