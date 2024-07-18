@@ -6,9 +6,12 @@
 
      <script>
         document.addEventListener('DOMContentLoaded', function() {
+             if(name){
             const name = localStorage.getItem('name');
                 document.getElementById('demo').textContent = 'Welcome ' + name;
-        });
+        }else 
+                   document.getElementById('demo').textContent = 'Welcome!';
+                  }};
     </script>
   
 </body>
