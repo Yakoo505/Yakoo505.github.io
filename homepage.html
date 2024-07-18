@@ -12,6 +12,13 @@
 <input type="submit" value="Login"> 
 </form>
 
-
+  <script>
+      document.getElementById('fname').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('fname').value;
+            localStorage.setItem('fname', name);
+            window.location.href = 'welcome.html';
+        });
+    </script>
 </body>
 </html>
